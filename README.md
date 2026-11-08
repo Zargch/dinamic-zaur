@@ -6,6 +6,8 @@ A dynamic island for Windows: a small black pill at the top of the screen that s
 
 ![Expanded panel](docs/panel.png)
 
+▶️ **[Watch the demo video](docs/DinamicZaur-demo.mp4)** (Spanish narration, 1:16)
+
 ## Download
 
 Get the latest version from [Releases](https://github.com/Zargch/dinamic-zaur/releases/latest):
@@ -26,8 +28,8 @@ The app isn't code-signed yet, so Windows SmartScreen may warn you the first tim
 | Volume indicator | Right-click menu |
 | ![Volume profile](docs/panel-volume.png) | ![Shelf](docs/panel-shelf.png) |
 | Volume profile with the per-app mixer | Shelf for dropped files |
-| ![About](docs/about.png) | ![Welcome](docs/welcome.png) |
-| Hidden *About* screen with update check | First-run setup |
+| ![Welcome](docs/welcome.png) | |
+| First-run setup | |
 
 ## Features
 
@@ -64,13 +66,9 @@ The optional installer is built with [Inno Setup 6](https://jrsoftware.org/isinf
 
 - Weather data: **[MET Norway](https://api.met.no/)** Locationforecast API, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Place search and names: © **[OpenStreetMap](https://www.openstreetmap.org/copyright)** contributors, via Nominatim, licensed under ODbL. Searches run only when you press *Search* (no autocomplete), in line with the [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/).
-- Update check: the GitHub Releases API. It runs only when you open the hidden *About* screen.
+- Update check: the GitHub Releases API. It never runs in the background.
 
 No accounts, API keys or telemetry are used.
-
-## Easter egg
-
-There's a hidden *About* screen. Open the panel and click the system card (CPU / RAM) five times quickly. It shows who made the app and whether a newer version is available.
 
 ## License
 

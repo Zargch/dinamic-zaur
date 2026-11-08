@@ -337,7 +337,7 @@ public:
   static constexpr float TOP = 8;   // franja oculta sobre el borde (esconde el redondeo superior)
   float cw = 230, ch = 32, vw = 0, vh = 0, tw = 230, th = 32;
   bool hover = false, expanded = false, animating = false, dragOver = false;
-  int tab = 0;  // 0 panel, 1 bandeja, 2 volumen, 3 acerca de (oculta: 5 clics en la tarjeta del sistema)
+  int tab = 0;  // 0 panel, 1 bandeja, 2 volumen, 3 acerca de
   int secretClicks = 0;
   DWORD secretTick = 0;
   struct ISlider { D2D1_RECT_F r; std::function<void(float)> set; };
@@ -616,7 +616,7 @@ public:
     if (tab == 1) DrawShelf(rt, a); else if (tab == 2) DrawVolume(rt, a); else if (tab == 3) DrawAbout(rt, a); else DrawPanel(rt, a);
   }
 
-  // ------------------------------------------------------------ acerca de (easter egg)
+  // ------------------------------------------------------------ acerca de
   void SecretClick() {
     DWORD now = GetTickCount();
     secretClicks = now - secretTick < 700 ? secretClicks + 1 : 1;
@@ -825,7 +825,7 @@ public:
     FillRound(rt, { cc.left + 14, cc.top + 118, cc.left + 14 + (cc.right - cc.left - 28) * yp, cc.top + 122 }, 2, RGBA(255, 69, 58, a));
     if (g_cfg.calendar != CAL_NONE) AddBtn(cc, [] { OpenCalendar(); }, false);
 
-    // ---- sistema (5 clics rapidos aqui abren el "Acerca de" escondido)
+    // ---- sistema
     D2D1_RECT_F sc{ 16, 188, 452, 252 };
     Card(rt, sc, a);
     AddBtn(sc, [this] { SecretClick(); }, true);
